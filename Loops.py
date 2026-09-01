@@ -29,12 +29,17 @@ def calculate_sum(end_number):
     return return_number
 
 # force int (fails if text is given)
-last_number = int(input("Enter last Number: "))
-print(f"The sum of all numbers from 1 to {last_number} is {calculate_sum(last_number)}")
+try:
+    last_number = int(input("Enter last Number: "))
+    print(f"The sum of all numbers from 1 to {last_number} is {calculate_sum(last_number)}")
+except:
+    print(f"ERROR: Input is not a number.  Rerun the program to try again... Continuing to the next method for now.")    
 
 # allow text and convert int (does not fail if text is given, give me more control)
 last_number = input("Enter last Number: ")
 if last_number.isdigit():
     print(f"The sum of all numbers from 1 to {last_number} is {calculate_sum(last_number)}")
 else:
-    print(f"ERROR: {last_number} is not a number.  Rerun the program to try again...")
+    print(f"ERROR: {last_number} is not a number.  Rerun the program to try again... Continuing to the next Exersize for now.")
+
+    
